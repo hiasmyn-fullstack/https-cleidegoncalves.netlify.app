@@ -1,0 +1,353 @@
+/* === RESET GERAL === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Garamond', Arial, sans-serif;
+}
+
+:root {
+    --cor-primaria:#e67ec5;   
+    --cor-suave:rgb(252, 237, 104);    
+    --cor-fundo: #faabef;       
+    --cor-texto: #080808;      
+    --cor-destaque: #25d366;    /* Verde WhatsApp */
+}
+ 
+body {
+  line-height: 1.6;
+  color: var(--cor-texto);
+  
+  /* Imagem de fundo com o rosto — FIXA no topo */
+  background-image: url('./fundo.png');
+  background-size: cover;
+  background-position: center 3%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh; /*  Corrigido: tela inteira */
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* === CABEÇALHO === */
+.contato-topo {
+    background: var(--cor-primaria);
+    color: rgb(8, 8, 8);
+    padding: 10px 5%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contato-topo p {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.navegacao {
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    box-shadow: 0 2px 8px rgba(241, 231, 221, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
+
+.logo span {
+    color: var(--cor-suave);
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    transform: translateY(0.5px);
+}
+
+.menu a {
+    color: var(--cor-texto);
+    text-decoration:none !important;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: rgb(74, 202, 241);
+}
+
+/* === DESTAQUE === */
+.destaque {
+  background: linear-gradient(rgba(74, 55, 40, 0.35), rgba(74, 55, 40, 0.35));
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 5%;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+
+.destaque-conteudo h1 {
+    font-size: 44px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.destaque-conteudo p {
+    font-size: 20px;
+    margin-bottom: 35px;
+    max-width: 600px;
+}
+
+.botao-principal {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--cor-destaque);
+    color: white;
+    padding: 15px 32px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.botao-principal:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+}
+
+.botao-secundario {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 15px 32px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+.botao-secundario:hover {
+    background: white;
+    color: var(--cor-primaria);
+}
+
+.contato-botoes {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* === DIFERENCIAIS === */
+.diferenciais {
+    padding: 70px 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    background: white;
+}
+
+.destaque-item {
+    text-align: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.destaque-item i {
+    font-size: 42px;
+    color: var(--cor-suave);
+    margin-bottom: 15px;
+}
+
+.destaque-item h3 {
+    margin-bottom: 10px;
+    color: var(--cor-primaria);
+}
+
+/* === SERVIÇOS === */
+.servicos {
+    padding: 80px 5%;
+}
+
+.servicos h2, .sobre h2, .contato h2 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: var(--cor-primaria);
+}
+
+.subtitulo {
+    text-align: center;
+    color: #7a6552;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+.grade-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.servico-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(139, 90, 43, 0.08);
+    transition: transform 0.3s;
+}
+
+.servico-card:hover {
+    transform: translateY(-5px);
+}
+
+.servico-card i {
+    font-size: 32px;
+    color: var(--cor-suave);
+    margin-bottom: 15px;
+}
+
+.servico-card h3 {
+    margin-bottom: 10px;
+    color: var(--cor-primaria);
+}
+
+
+/* === SOBRE === */
+.sobre {
+    padding: 80px 5%;
+    background: white;
+}
+
+.sobre-conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.sobre-conteudo p {
+    margin-bottom: 20px;
+}
+
+.sobre-conteudo li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sobre-conteudo i {
+    color: var(--cor-destaque);
+}
+
+.metodos-conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.metodos-conteudo i {
+    color: var(--cor-destaque);
+    margin-right: 10px;
+}
+
+/* === FOTO DA RECEPÇÃO === */
+.recepcao {
+  width: 85%;              /* ← tamanho da foto: ajusta aqui! */
+  max-width: 700px;        /* ← não passa desse tamanho */
+  margin: 30px auto;       /* ← espaço em cima/baixo + centraliza */
+  padding: 20px;           /* ← respiração interna */
+  background: white;        /* ← FUNDO BRANCO → não mostra o rosto ao redor! */
+}
+
+.recepcao img {            /* ← controla a imagem DENTRO da caixa */
+  width: 100%;             /* ← preenche a caixa */
+  height: auto;            /* ← NÃO distorce! */
+  display: block;
+  border-radius: 8px;      /* ← cantos suaves */
+  margin-bottom: 30px;
+}
+
+.recepcao h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    font-size: 40px;
+    color: var(--cor-primaria);
+
+}
+.recepcao p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    color: #050505;
+}
+/* === CONTATO === */
+.contato {
+    padding: 80px 5%;
+    background: var(--cor-primaria);
+    color: white;
+    text-align: center;
+}
+
+.contato p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* === RODAPÉ === */
+footer {
+    background: #4a3728;
+    color: #e0d2c0;
+    text-align: center;
+    padding: 30px 5%;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* === CELULAR === */
+@media (max-width: 768px) {
+    .contato-topo {
+        justify-content: center;
+    }
+    
+    .menu {
+        display: none;
+    }
+    
+    .destaque-conteudo h1 {
+        font-size: 32px;
+    }
+
+    .recepcao {
+        width: 85%; /* ← no celular fica um pouquinho maior */
+    }
+}
